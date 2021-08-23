@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Vegetable Garden</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- add the new hides -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromFood"]/ingredients/li[1]/filter/thingDefs |
+						Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromFood"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>Rawapple</li>
+						<li>Rawbanana</li>
+						<li>Rawgrape</li>
+						<li>Raworange</li>
+						<li>Rawpeach</li>
+						<li>Rawblueberry</li>
+						<li>Rawgooseberry</li>
+						<li>Rawcloudberry</li>
+						<li>RawBarley</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

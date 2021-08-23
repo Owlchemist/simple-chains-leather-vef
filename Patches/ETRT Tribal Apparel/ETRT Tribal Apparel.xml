@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ETRT: Tribal Apparel</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="ET_Apparel_WolfHood"]/costList</xpath>
+					<value>
+						<costList>
+							<Leather_Bear>35</Leather_Bear>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="ET_Apparel_WolfHood"]/label</xpath>
+					<value>
+						<label>tribal fur hood</label>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

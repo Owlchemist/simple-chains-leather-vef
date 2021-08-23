@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Simple Chains: Lumber</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- add the new hides -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/ingredients/li[1]/filter/thingDefs/li[1] |
+						Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
+					<value>
+						<li>Owl_WoodLog</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Simple Chains: Lumber VEF</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- add the new hides -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/ingredients/li[1]/filter/thingDefs/li[1] |
+						Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
+					<value>
+						<li>Owl_WoodLog</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

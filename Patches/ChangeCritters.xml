@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			<!-- Hide_Plain -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[
+					text()="Leather_Plain" or 
+					text()="Leather_Dog" or 
+					text()="Leather_Wolf" or 
+					text()="Leather_Panthera" or 
+					text()="Leather_Camel" or 
+					text()="Leather_Pig"]</xpath>
+				<value>
+					<leatherDef>Hide_Plain</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_Thick -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[
+					text()="Leather_Bear" or 
+					text()="Leather_Elephant" or 
+					text()="Leather_Rhinoceros"]</xpath>
+				<value>
+					<leatherDef>Hide_Thick</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_SoftPelt -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[
+					text()="Leather_Light" or 
+					text()="Leather_Chinchilla" or 
+					text()="Leather_GuineaPig" or 
+					text()="Leather_Fox"]</xpath>
+				<value>
+					<leatherDef>Hide_SoftPelt</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_HeavyPelt -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[
+					text()="Leather_Bluefur" or 
+					text()="Leather_Heavy"]</xpath>
+				<value>
+					<leatherDef>Hide_HeavyPelt</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_Scale -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[text()="Leather_Lizard"]</xpath>
+				<value>
+					<leatherDef>Hide_Scale</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_Birdskin -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[text()="Leather_Bird"]</xpath>
+				<value>
+					<leatherDef>Hide_Bird</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_ThrumboPelt -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[text()="Leather_Thrumbo"]</xpath>
+				<value>
+					<leatherDef>Hide_Thrumbo</leatherDef>
+				</value>
+			</li>
+			<!-- Hide_HumanFlesh -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/race/leatherDef[text()="Leather_Human"]</xpath>
+				<value>
+					<leatherDef>Hide_Human</leatherDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<!-- Change the leather amounts on the follow creatures. First we remove this tag in case some other mod may have added it -->
+	<Operation Class="PatchOperationRemove">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="Rat" or defName="Turkey"]/statBases/LeatherAmount</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="Rat" or defName="Turkey"]/statBases</xpath>
+		<value>
+			<LeatherAmount>0</LeatherAmount>
+		</value>
+	</Operation>
+</Patch>	

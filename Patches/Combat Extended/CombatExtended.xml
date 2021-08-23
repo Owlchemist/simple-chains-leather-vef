@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+						defName="Leather_Plain" or 
+						defName="Leather_Bear" or 
+						defName="Leather_Light" or 
+						defName="Leather_Bluefur" or 
+						defName="Leather_Lizard" or 
+						defName="Leather_Bird" or 
+						defName="Leather_Human" or 
+						defName="Leather_Rawhide" or 
+						defName="Leather_Patch"]/statBases/StuffPower_Armor_Sharp | 
+						Defs/ThingDef[
+						defName="Leather_Plain" or 
+						defName="Leather_Bear" or 
+						defName="Leather_Light" or 
+						defName="Leather_Bluefur" or 
+						defName="Leather_Lizard" or 
+						defName="Leather_Bird" or 
+						defName="Leather_Human" or 
+						defName="Leather_Rawhide" or 
+						defName="Leather_Patch"]/statBases/StuffPower_Armor_Blunt
+					</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Plain"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.27</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.14</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Bear"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.35</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.165</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Light"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.20</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.115</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Bluefur"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.27</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.14</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Lizard"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.29</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Bird"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.25</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.11</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Human"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.25</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.11</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Patch"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.20</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.11</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Leather_Rawhide"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.25</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.13</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>	

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 1.0</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- add the new hides -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromFood"]/ingredients/li[1]/filter/thingDefs |
+						Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromFood"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>RawPlantain</li>
+						<li>RawApples</li>
+						<li>RawOrange</li>
+						<li>RawSoybean</li>
+						<li>RawFigs</li>
+						<li>RawPomegranates</li>
+						<li>RawBarley</li>
+						<li>RawCactusFruit</li>
+						<li>RawTeaLeaves</li>
+						<li>RawJuniperBerries</li>
+						<li>RawGrapes</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

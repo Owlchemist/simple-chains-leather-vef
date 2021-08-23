@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Humanoid Alien Races</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- add the new hides -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace/race/leatherDef[text()="Leather_Wolf" or 
+					text()="Leather_Panthera" or 
+					text()="Leather_Camel" or 
+					text()="Leather_Pig" or 
+					text()="Leather_Elephant" or 
+					text()="Leather_Rhinoceros" or 
+					text()="Leather_Chinchilla" or 
+					text()="Leather_Fox" or 
+					text()="Leather_GuineaPig" or 
+					text()="Leather_Heavy"]</xpath>
+					<value>
+						<leatherDef>Hide_Plain</leatherDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

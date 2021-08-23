@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Livestock</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- Replace leather drops with generics where appropriate -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Brownfur"]</xpath>
+					<value>
+						<leatherDef>Hide_Plain</leatherDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_GuineaPig"]</xpath>
+					<value>
+						<leatherDef>Hide_SoftPelt</leatherDef>
+					</value>
+				</li>
+				
+				<!-- Remove unused leather -->
+				<li Class="PatchOperationRemove">
+					<xpath>
+						Defs/ThingDef[defName="AEXP_Leather_Brownfur" or defName="AEXP_Leather_GuineaPig"]/*/..
+					</xpath>
+				</li>
+				
+				<!-- Remove leather drop from the following -->
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[
+						defName="AEXP_Goose"]/statBases/LeatherAmount</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[
+						defName="AEXP_Goose"]/statBases</xpath>
+					<value>
+						<LeatherAmount>0</LeatherAmount>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

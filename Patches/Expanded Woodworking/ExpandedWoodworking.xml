@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Expanded Woodworking</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- support for all raw wood -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/ingredients/li[1]/filter |
+						Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/fixedIngredientFilter</xpath>
+					<value>
+						<categories>
+							<li>WoodTypes</li>
+						</categories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
