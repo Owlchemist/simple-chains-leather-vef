@@ -7,9 +7,9 @@
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/tanning_vat</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(2,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			
+			<drawSize>(1.5,1.5)</drawSize>
 			<damageData>
 				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
 				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
@@ -25,7 +25,8 @@
 				<offset>(0,0,-0.25)</offset>
 			</shadowData>
 		</graphicData>
-		<uiIconPath>Things/Building/Production/tanning_vat_north</uiIconPath>
+		<rotatable>false</rotatable>
+		<uiIconPath>Things/Building/Production/tanning_vat</uiIconPath>
 		<stuffCategories>
 			<li>Metallic</li>
 			<li>Woody</li>
@@ -42,12 +43,10 @@
 		</statBases>
 		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
-		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<comps>
 			<li Class="ItemProcessor.CompProperties_ItemProcessor">
 				<buildingOnGraphic>Things/Building/Production/tanning_vat_full</buildingOnGraphic>
-				<numberOfInputs>2</numberOfInputs>
+				<numberOfInputs>1</numberOfInputs>
 				<showProgressBar>true</showProgressBar>
 				<acceptsNoneAsInput>false</acceptsNoneAsInput>
 				<InsertFirstItemDesc>IP_ChooseOutput</InsertFirstItemDesc>
