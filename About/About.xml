@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Simple Chains: Leather VEF</name>
+	<author>Owlchemist</author>
+	<packageId>Owlchemist.SimpleChains.LeatherVEF</packageId>
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<description>
+		Aimed for players desiring more challenge in their resource production, this mod introduces a leather processing production chain. In order to get leather, your pawns will need to boil up tanning liquor and soak their freshly acquired raw hides and pelts in it for a couple days.
+		
+		Butchered animals now drop a hide instead of leather. In order to process them, pawns will need to boil [b]tanning liquor[/b] at the campfire or stove. Tannin liquor can be made either by processing raw wood, or by using foods known to contain tannins.
+
+		Once you have your hides and tannins ready, build yourself a tanning vat somewhere. You'll probably want quite a few tanning vats, so consider building a tannery building to house them! The tanning vat can be used to make final preparations there onsite, and once done, the pawn will then place the hide into the vat where it will soak for some time. Thicker leather take longer, though you can expect to wait anywhere from two to four days before the finished leather is ready.
+	</description>
+	<modDependencies>
+        <li>
+            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VCookE</li>
+		<li>AveryTheKitty.XenohumansAnthromorphs</li>
+    </loadAfter>
+</ModMetaData>
